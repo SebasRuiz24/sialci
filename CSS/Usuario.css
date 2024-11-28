@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #bbbbbb;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+}
+
+.login-button {
+    background-color: #FA5229;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: #00b383;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+@media (min-width: 991px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FA5229;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-wsp:hover {
+    color: #0df053;
+    background: #fff;
+}
+
+.icon-container {
+    width: 35px;
+    height: 35px;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-container {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.fondo {
+    background: url(../img/CafeNaranja.jpg) center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.formulario {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.container {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 25px;
+    margin: 0 15px;
+    top: 90px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+}
+
+.container header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container header::before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 25px;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #ff0000;
+}
+
+.container form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.13);
+}
+
+.input-field input[type="date"] {
+    color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+    color: #333;
+}
+
+.container form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #ff0000;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00b383;
+}
+
+.container form button {
+    font-size: 14px;
+    font-weight: 400;
+    ;
+}
+
+form button i {
+    margin: 0 6px;
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+
+}
+
+form .buttons button {
+    margin-right: 14px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .formulario {
+        margin-top: 570px;
+        /* Reducir el margen superior del formulario en dispositivos móviles */
+    }
+
+    .container {
+        margin-top: 0px;
+        /* Ajustar el margen superior del contenedor del formulario */
+        width: 90%;
+        /* Reducir el ancho del contenedor del formulario en dispositivos móviles */
+    }
+
+    /* Ajustar el ancho de los campos de entrada en dispositivos móviles */
+    .container form .fields .input-field {
+        width: 100%;
+    }
+
+    /* Otros ajustes de diseño si es necesario */
+}
+
+
+@media (max-width: 550px) {
+    form .fields .input-field {
+        width: 100%;
+    }
+}
+
+
+
+.input-field input[name="paquetes"] {
+    width: 100px;
+    /* Ajusta este valor según tus necesidades */
+}
+
+.input-field.pesos label,
+.input-field.pesos input[type="number"] {
+    width: 100px;
+    margin-left: 0;
+    /* Elimina el margen izquierdo negativo */
+}
+
+.input-field.pesos .input-group {
+    display: flex;
+    /* Usa Flexbox */
+    align-items: center;
+    /* Alinea los elementos verticalmente */
+}
+
+.input-field.pesos .input-group input[type="number"] {
+    margin-right: 10px;
+    /* Ajusta el espacio entre los campos de entrada y las etiquetas */
+}
+
+.input-field.pesos select {
+    width: 57px;
+    /* Ajusta el ancho según tus necesidades */
+    margin-top: 0px;
+    margin-left: 10px;
+    /* Ajusta el margen izquierdo según sea necesario */
+    height: 42px;
+    /* Ajusta la altura según tus necesidades */
+    border-radius: 5px;
+    /* Ajusta el radio de borde según sea necesario */
+    border: 1px solid #aaa;
+    /* Ajusta el color y grosor del borde según sea necesario */
+    padding: 0 10px;
+    /* Ajusta el relleno según sea necesario */
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente según sea necesario */
+    color: #333;
+    /* Ajusta el color del texto según sea necesario */
+    background-color: #fff;
+}
+
+.input-field.dimensiones label,
+.input-field.dimensiones .input-group {
+    margin-left: -325px;
+    /* Elimina el margen izquierdo negativo */
+}
+
+.input-field.dimensiones .input-group {
+    display: flex;
+    /* Usa Flexbox */
+    align-items: center;
+    /* Alinea los elementos verticalmente */
+    
+}
+
+.input-field.dimensiones .input-group input[type="number"] {
+    margin-right: -1px;
+    /* Ajusta el espacio entre los campos de entrada y las etiquetas */
+}
+
+
+
+.details.addres {
+    margin-top: 100px;
+}

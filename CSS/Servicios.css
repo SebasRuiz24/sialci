@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    background-color:  rgb(249, 243, 243); 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+.background-image-container {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según lo que necesites */
+   
+    position: relative;
+}
+
+.background-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin deformarse */
+}
+
+.header {
+    
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.22);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: -20px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 35px 35px 35px 35px;
+    border: none;              /* Sin borde */
+    border-radius: 20px; 
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #54595f;
+    font-family: "Poppins", Sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 1px;
+}
+ /* Contenedor principal para el formulario y los resultados */
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+/* Estilos del formulario */
+form {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    color: #0a0a0a;
+    font-family: "Noto Sans", sans-serif;
+    border-color: #fc9004; /* Cambia este valor al color que prefieras */
+    outline: none; /* Esto elimina el borde adicional del navegador */
+    box-shadow: 0 2px 5px rgba(223, 80, 3, 0.959); /* Opcional: añade un efecto de sombra */
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+   font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #666777;
+}
+.boton-cotizar {
+    background-color: #007bff; /* Color azul inicial */
+    color: white;              /* Color del texto */
+    padding: 10px 20px;        /* Tamaño del botón */
+    border: none;              /* Sin borde */
+    border-radius: 5px;        /* Borde redondeado */
+    cursor: pointer;           /* Cambia el cursor */
+    transition: background-color 0.3s ease; /* Transición suave */
+    font-size: 16px;           /* Tamaño de la fuente */
+}
+
+/* Efecto de hover (al pasar el cursor) */
+.boton-cotizar:hover {
+    background-color: #28a745; /* Cambia a color verde */
+}
+
+/* Botón para agregar más cotizaciones */
+.remove-button, button {
+    margin-top: 10px;
+    display: block;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.remove-button {
+    color: rgb(245, 37, 10);
+}
+
+/* Estilos para el área de resultados */
+#resultados {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-top: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  padding: 20px; /* Espacio interno para que el contenido no esté pegado a los bordes */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+#resultados h2 {
+    margin-top: 0px;
+    font-size: 19px;
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+}
+
+#resultados h2 img {
+    vertical-align: middle; /* Para centrar verticalmente con el texto */
+    margin-right: 10px;      /* Espacio entre el ícono y el texto */
+}  
+
+*{
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+
+.navbar{
+    background-color: #fff;
+    color: #000000;
+} 
+
+.video {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+.navbar-brand img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 20%;
+}
+
+.login-button{
+    background-color: #FA5229;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover{
+    background-color: #00b383;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #000;
+}
+
+@media (min-width: 991px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FA5229;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.btn-wsp:hover {
+    color: #0df053;
+    background: #fff;
+}
+
+.icon-container {
+    width: 35px;
+    height: 35px;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-container {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+.fa-solid {
+    font-size: 80px;
+    margin-left: 10px
+    ; 
+}
+
+.parrafos {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 60px;
+}
+
+.contenido {
+    margin-right: 120px;
+    background-color: #ef652e;
+    border-radius: 10px; 
+    padding: 40px; 
+    margin-bottom: 20px;
+    box-shadow: 63px 33px 90px 3px rgba(0,0,0,0.106);
+}
+.contenido h3 {
+    margin: 45px 0; 
+}
+
+
+h2, p {
+    margin: 0; 
+}
+@media (max-width: 1200px) {
+    .parrafos {
+        flex-wrap: wrap;
+        margin-left: 30px;
+        margin-right: 30px; 
+    }
+
+    .contenido {
+        flex-basis: 50%;
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .parrafos {
+        margin-top: 100px; 
+        margin-left: 15px;
+        margin-right: 15px; 
+    }
+
+    .contenido {
+        flex-basis: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .fa-solid {
+        font-size: 40px; 
+        margin-left: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .contenido h3 {
+        margin: 30px 0;
+    }
+   
+    .container {
+        flex-direction: column; /* Cambia la dirección de flex a columna */
+        align-items: center;    /* Centra los elementos en la columna */
+    }
+
+    form, #resultados {
+        width: 90%; /* Ancho del formulario y resultados en pantallas pequeñas */
+        margin: 10px 0; /* Añade un margen vertical entre el formulario y los resultados */
+    }
+
+    form {
+        padding: 15px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .boton-cotizar {
+        width: 100%; /* Hacer el botón de cotizar más ancho */
+    }
+    }

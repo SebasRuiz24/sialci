@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 15px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+.custom-table {
+    max-width: 100%;
+}
+.navbar{
+    background-color: #fff;
+    color: #000;
+} 
+
+.navbar-brand img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 20%;
+}
+
+.login-button{
+    background-color: #FA5229;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    text-decoration: none;
+}
+
+.login-button:hover{
+    background-color: #00b383;
+    text-decoration: none;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #000;
+    text-decoration: none;
+}
+
+@media (min-width: 991px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FA5229;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.text-primary,
+.text-dark {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.text-center{
+    text-decoration: none;
+}
+
+.footer-col ul li {
+    font-size: 30px;
+}
+
+.text-primary, .text-dark a:hover {
+    color: #FA5229 !important;
+}
+
+.container{
+    padding-top: 40px;
+    margin: 30px;
+}
